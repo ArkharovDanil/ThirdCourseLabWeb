@@ -1,0 +1,265 @@
+:root {
+  --active-color: #070808;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+  background: var(--active-color);
+  transition: background 0.4s ease;
+}
+
+h1 {
+  text-align: center;
+  padding: 5px;
+  font-size: 25px;
+  color: white;
+}
+
+tbody {
+  display: block;
+  height: 360px;
+  overflow-y: scroll;
+}
+
+tbody::-webkit-scrollbar {
+  display: none;
+}
+
+thead, tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table {
+  width: 550px;
+}
+
+.newTrackForm {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.tracklist {
+  margin: 0 auto;
+  color: white;
+  text-align-last: left;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+
+.tracklist td {
+  padding: 9px 8px;
+}
+
+.tracklist th {
+  padding: 10px 8px;
+  font-size: 1.2em;
+  border-bottom: 3px solid rgba(4, 5, 5, 0.2);
+}
+
+.linkBlock {
+  max-width: 200px;
+  padding: 10px 5px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: var(--active-color);
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.linkBlock a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.linkBlock {
+  transition: 0.1s;
+}
+
+.linkBlock:hover {
+  transform: translateY(3px);
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.trackLoad {
+  width: 200px;
+  padding: 10px 5px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: rgb(4, 4, 5);
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.trackLoad:hover {
+  background-color: rgb(9, 12, 11);
+}
+
+label {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input[type="text"], select {
+  margin: 0 auto;
+  height: 40px;
+  width: 300px;
+  text-align: center;
+  border: none;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 10px 10px rgba(88, 88, 88, 0.1);
+  font-size: 15px;
+}
+
+.FileUpload {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+input[type="file"] {
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+}
+
+input[type="range"] {
+  height: 5px;
+  -webkit-appearance: none;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background: #040505;
+  transition: background 0.2s ease;
+  cursor: pointer;
+}
+
+.clickableTd {
+  cursor: pointer;
+}
+
+.clickableTd:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+
+.audio-player {
+  max-width: 300px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.2);
+  margin: auto;
+  margin-bottom: 10px;
+  color: white;
+}
+
+p {
+  text-align: center;
+  color: white;
+  font-style: italic;
+}
+
+.btn {
+  color: white;
+  font-weight: bold;
+  background-color: #000000;
+  height: 30px;
+  width: 100px;
+  border-radius: 10px;
+  transition: 0.1s;
+}
+
+.btn:hover {
+  background-color: #000000;
+}
+
+.artwork {
+  border-radius: 120px;
+  display: block;
+  margin: auto;
+  height: 200px;
+  width: 200px;
+}
+
+.track-info {
+  text-align: center;
+  z-index: 1;
+  position: relative;
+}
+
+.title {
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.artist {
+  font-weight: 300;
+  margin-top: 0;
+}
+
+.audio-controls {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  margin: 0 auto 15px;
+}
+
+.audio-controls .prev svg,
+.audio-controls .next svg {
+  width: 35px;
+  height: 35px;
+}
+
+.audio-controls .play svg,
+.audio-controls .pause svg {
+  height: 40px;
+  width: 40px;
+}
+
+.audio-controls path {
+  fill: white;
+}
+
+.color-backdrop {
+  background: color=darkblue;
+ 
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+
+
+@keyframes colorChange {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
